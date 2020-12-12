@@ -1,4 +1,5 @@
 <template>
+  {{ $consts.BaseUrl }}
   <el-container>
     <el-aside width="200px">
       <el-menu
