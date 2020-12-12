@@ -35,9 +35,6 @@
 import { ref } from "vue";
 
 export default {
-  components:{
-    Th
-  },
   setup() {
     const isCollapse = ref(false);
 
