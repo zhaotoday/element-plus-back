@@ -1,13 +1,20 @@
-import { Component, Vue } from "vue-property-decorator";
+import { useRouter, getCurrentInstance } from "vue-router";
 
-@Component
-export default class TheHeader extends Vue {
-  get user() {
-    return this.$auth.get()["user"];
-  }
+export default {
+  name: "TheHeader",
+  setup() {
+    const { ctx } = getCurrentInstance();
 
-  logout() {
-    this.$router.push("/logout");
-    this.$Message.success("退出成功");
+    const user = {};
+
+    const logout = () => {
+      useRouter().push("/logout");
+      ctx.$message.success("退出成功");
+    };
+
+    return {
+      user,
+      logout
+    };
   }
-}
+};

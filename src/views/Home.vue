@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, getCurrentInstance } from "vue";
 
 export default {
   setup() {
@@ -41,6 +41,13 @@ export default {
     const onOpen = () => {};
 
     const onClose = () => {};
+
+    const { ctx } = getCurrentInstance();
+
+    ctx.$message({
+      type: "success",
+      message: "aaa"
+    });
 
     return {
       isCollapse,
