@@ -1,5 +1,4 @@
 <template>
-  {{ $consts.BaseUrl }}
   <el-container>
     <el-aside width="200px">
       <el-menu
@@ -36,6 +35,9 @@
 import { ref } from "vue";
 
 export default {
+  components:{
+    Th
+  },
   setup() {
     const isCollapse = ref(false);
 
