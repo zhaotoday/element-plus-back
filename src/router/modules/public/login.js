@@ -2,7 +2,7 @@ import auth from "@/utils/auth";
 
 export default {
   path: "login",
-  component: resolve => require(["@/views/login"], resolve),
+  component: import("@/views/login"),
   beforeEnter(to, from, next) {
     if (auth.loggedIn()) {
       next("/");

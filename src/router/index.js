@@ -1,19 +1,25 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Root from "@/views/root";
+import publicRoutes from "./modules/public";
 
 const routes = [
   {
     path: "/",
-    component: Root
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    component: () => import("@/views/root"),
+    children: [
+      {
+        path: "/",
+        component: () => import("@/components/layout"),
+        children: [],
+        meta: {
+          requiresAuth: true
+        }
+      },
+      ...publicRoutes,
+      {
+        path: "*",
+        component: () => import("@/views/not-fount")
+      }
+    ]
   }
 ];
 
