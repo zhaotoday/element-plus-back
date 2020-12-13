@@ -1,3 +1,13 @@
 export default {
-  name: "TheSidebar"
+  name: "TheSidebar",
+  setup() {
+    const onOpen = () => {};
+
+    const onClose = () => {};
+
+    return {
+      onOpen,
+      onClose
+    };
+  }
 };
