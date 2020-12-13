@@ -7,7 +7,7 @@
       后台管理系统
     </div>
     <el-menu
-      default-active="1-0"
+      :default-active="activeKey"
       class="el-menu-vertical-demo"
       background-color="#001529"
       text-color="#fff"
