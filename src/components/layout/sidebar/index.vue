@@ -7,21 +7,20 @@
       后台管理系统
     </div>
     <el-menu
-      default-active="1-4-1"
+      default-active="1-0"
       class="el-menu-vertical-demo"
       background-color="#001529"
       text-color="#fff"
       active-text-color="#ffd04b"
-      @open="onOpen"
-      @close="onClose"
+      @select="onSelect"
     >
       <el-submenu
         v-for="(item1, index1) in $consts.SidebarMenu"
         :key="index1"
-        :index="index1"
+        :index="`${index1}`"
       >
         <template #title>
-          <i class="el-icon-location"></i>
+          <i :class="item1.icon"></i>
           <span>{{ item1.title }}</span>
         </template>
         <el-menu-item-group>
@@ -29,8 +28,9 @@
             v-for="(item2, index2) in item1.children"
             :key="index2"
             :index="`${index1}-${index2}`"
-            >{{ item2.title }}</el-menu-item
           >
+            {{ item2.title }}
+          </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>

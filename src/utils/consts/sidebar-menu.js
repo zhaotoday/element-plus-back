@@ -1,16 +1,29 @@
 export default [
   {
-    icon: "md-cube",
-    name: "products",
+    icon: "el-icon-question",
     title: "商品管理",
     children: [
       {
         title: "商品列表",
-        route: "/products/products/list"
+        path: "/products/products/list"
       },
       {
         title: "商品分类",
-        route: "/products/products/categories"
+        path: "/products/products/categories"
+      }
+    ]
+  },
+  {
+    icon: "el-icon-platform-eleme",
+    title: "商品管理",
+    children: [
+      {
+        title: "商品列表",
+        path: "/products/products/list"
+      },
+      {
+        title: "商品分类",
+        path: "/products/products/categories"
       }
     ]
   }
