@@ -1,5 +1,6 @@
 export default {
   path: "articles",
+  component: () => import("@/views/articles"),
   children: [
     {
       path: "list",

@@ -25,7 +25,7 @@ export default {
     const activeKey = ref(getActiveKey());
 
     onBeforeRouteUpdate((to, from, next) => {
-      console.log(0)
+      console.log(0);
       next();
     });
 
