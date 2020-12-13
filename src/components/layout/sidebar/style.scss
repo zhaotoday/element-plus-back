@@ -26,14 +26,10 @@
     @include position--absolute(50%, null, null, 20px);
 
     transform: translateY(-50%);
+    line-height: 0;
 
-    .ivu-avatar {
+    .el-avatar {
       background-color: #1890ff;
-
-      i {
-        top: 1px;
-        font-size: 20px;
-      }
     }
   }
 
