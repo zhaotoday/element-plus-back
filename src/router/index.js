@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+import auth from "@/utils/auth";
 import publicRoutes from "./routes/public";
 import adminRoutes from "./routes/admin";
 
@@ -30,7 +31,21 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  next();
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!auth.loggedIn()) {
+      auth.logout();
+      next({
+        path: "login",
+        query: { redirect: to.fullPath }
+      });
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
 });
+
+router.afterEach(() => {});
 
 export default router;
