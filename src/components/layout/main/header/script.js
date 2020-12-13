@@ -5,11 +5,11 @@ export default {
   name: "TheHeader",
   setup() {
     const { ctx } = getCurrentInstance();
-
+    const router = useRouter();
     const user = { username: "管理员" };
 
     const logout = () => {
-      useRouter().push("/logout");
+      router.push("/logout");
       ctx.$message.success("退出成功");
     };
 
