@@ -17,7 +17,7 @@ const routes = [
       },
       ...publicRoutes,
       {
-        path: "matchPath(.*)*",
+        path: ":pathMatch(.*)*",
         component: () => import("@/views/not-fount")
       }
     ]
