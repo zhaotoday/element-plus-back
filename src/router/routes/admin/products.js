@@ -1,6 +1,6 @@
 export default {
-  path: "articles",
-  component: () => import("@/views/articles"),
+  path: "products",
+  component: () => import("@/views/products"),
   children: [
     {
       path: "categories",
@@ -8,11 +8,11 @@ export default {
     },
     {
       path: "list",
-      component: () => import("@/views/articles/list")
+      component: () => import("@/views/products/list")
     },
     {
       path: "list/form/:id?",
-      component: () => import("@/views/articles/form")
+      component: () => import("@/views/products/form")
     }
   ]
 };

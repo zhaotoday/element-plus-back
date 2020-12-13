@@ -1,11 +1,12 @@
 import { ref, getCurrentInstance } from "vue";
-import { useRouter, onBeforeRouteUpdate } from "vue-router";
+import { useRouter, onBeforeRouteUpdate, useRoute } from "vue-router";
 
 export default {
   name: "TheSidebar",
   setup() {
     const { ctx } = getCurrentInstance();
     const router = useRouter();
+    const route = useRoute();
     const sidebarMenus = ctx.$consts.SidebarMenu;
 
     const getActiveKey = () => {
@@ -13,7 +14,13 @@ export default {
 
       sidebarMenus.forEach((item1, index1) => {
         item1.children.forEach((item2, index2) => {
-          if (router.path === item2.path) {
+          const routePaths = route.path.split("/");
+          const itemPaths = item2.path.split("/");
+
+          if (
+            routePaths[1] === itemPaths[1] &&
+            routePaths[2] === itemPaths[2]
+          ) {
             key = `${index1}-${index2}`;
           }
         });
