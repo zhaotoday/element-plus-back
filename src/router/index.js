@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import publicRoutes from "./modules/public";
+import publicRoutes from "./routes/public";
+import adminRoutes from "./routes/admin";
 
 const routes = [
   {
@@ -9,19 +10,14 @@ const routes = [
       {
         path: "/",
         component: () => import("@/components/layout"),
-        children: [
-          {
-            path: "/",
-            component: () => import("@/views/dashboard")
-          }
-        ],
+        children: adminRoutes,
         meta: {
           requiresAuth: true
         }
       },
       ...publicRoutes,
       {
-        path: "*",
+        path: "matchPath(.*)*",
         component: () => import("@/views/not-fount")
       }
     ]
