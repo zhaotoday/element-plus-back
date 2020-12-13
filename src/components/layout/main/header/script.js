@@ -6,7 +6,7 @@ export default {
   setup() {
     const { ctx } = getCurrentInstance();
 
-    const user = {};
+    const user = { username: "管理员" };
 
     const logout = () => {
       useRouter().push("/logout");

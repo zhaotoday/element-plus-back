@@ -9,7 +9,12 @@ const routes = [
       {
         path: "/",
         component: () => import("@/components/layout"),
-        children: [],
+        children: [
+          {
+            path: "/",
+            component: () => import("@/views/dashboard")
+          }
+        ],
         meta: {
           requiresAuth: true
         }

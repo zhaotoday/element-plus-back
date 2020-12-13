@@ -36,4 +36,8 @@
   &::-webkit-scrollbar {
     width: 0;
   }
+
+  .el-menu {
+    width: $sidebar-width + 2px;
+  }
 }

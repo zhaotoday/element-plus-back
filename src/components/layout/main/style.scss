@@ -7,7 +7,7 @@
   min-width: 1200px;
 
   @include e(body) {
-    @include position--absolute($header-height + 23px, 23px, 23px, 23px);
+    @include position--absolute($header-height + 14px, 14px, 14px, 14px);
 
     padding: 20px;
     background-color: white;
