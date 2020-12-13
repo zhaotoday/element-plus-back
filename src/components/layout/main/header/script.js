@@ -1,4 +1,5 @@
-import { useRouter, getCurrentInstance } from "vue-router";
+import { getCurrentInstance } from "vue";
+import { useRouter } from "vue-router";
 
 export default {
   name: "TheHeader",
