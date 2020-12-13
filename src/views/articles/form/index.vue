@@ -1,0 +1,3 @@
+<template>
+  articles form
+</template>

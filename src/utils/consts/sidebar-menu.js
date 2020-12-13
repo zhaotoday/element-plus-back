@@ -1,29 +1,29 @@
 export default [
   {
-    icon: "el-icon-question",
+    icon: "el-icon-goods",
     title: "商品管理",
     children: [
       {
         title: "商品列表",
-        path: "/products/products/list"
+        path: "/products/list"
       },
       {
         title: "商品分类",
-        path: "/products/products/categories"
+        path: "/products/categories"
       }
     ]
   },
   {
-    icon: "el-icon-platform-eleme",
-    title: "商品管理",
+    icon: "el-icon-reading",
+    title: "文章管理",
     children: [
       {
-        title: "商品列表",
-        path: "/products/products/list"
+        title: "文章列表",
+        path: "/articles/list"
       },
       {
-        title: "商品分类",
-        path: "/products/products/categories"
+        title: "文章分类",
+        path: "/articles/categories"
       }
     ]
   }

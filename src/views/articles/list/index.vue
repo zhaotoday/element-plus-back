@@ -1,0 +1,3 @@
+<template>
+  articles list
+</template>

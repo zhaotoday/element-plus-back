@@ -40,6 +40,7 @@ export default {
     };
 
     return {
+      router,
       activeKey,
       onSelect
     };
