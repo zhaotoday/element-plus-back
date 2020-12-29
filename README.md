@@ -22,14 +22,20 @@
 - [李南江 - Vue3 正式版教程](https://www.bilibili.com/video/BV14k4y117LL)
 - [哈默聊前端 - Vue3](https://space.bilibili.com/492976859/video)
 - [大地 - Vue3 教程](https://www.bilibili.com/video/BV1zt411e7fp)
+- [Young 村长 - Composition API + 深度解读](https://www.bilibili.com/video/BV1my4y1m7sz)
 - [Young 村长 - Vue3 光速上手](https://www.bilibili.com/video/BV1Wh411X7Xp)
 - [Young 村长 - 项目打包、部署、CI/CD](https://www.bilibili.com/video/BV1Wh411X7Xp?p=30)
 
 #### 链接
 
+- [【Vue3官方教程】🎄万字笔记 | 同步导学视频 ](https://juejin.cn/post/6909247394904702984)
+- [vue3-study](https://github.com/su37josephxia/vue3-study)
+- [Vue-Mastery学习笔记](https://www.yuque.com/nxtt7g/kompdt)
 - [@vue/composition-api - 用于提供组合式 API 的 Vue 2 插件](https://github.com/vuejs/composition-api/blob/master/README.zh-CN.md)
 - [@vue/composition-api 速成课](https://blog.csdn.net/frontend_frank/article/details/108786784)
 - [Vue Class Component v8 - The next Vue Class Component for Vue v3.](https://github.com/vuejs/vue-class-component/tree/next)
+- [Vue3 实战笔记](https://juejin.cn/post/6909632635665039367)
+- [快速使用 Vue3 最新的 15 个常用 API](https://juejin.cn/post/6897030228867022856)
 
 #### 交互参考
 
